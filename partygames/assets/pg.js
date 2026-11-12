@@ -1,4 +1,4 @@
-/* partygames.shareyourgroup.com: game finder, party timer, chit maker (draw, teams, print), scoreboard. Everything stays in the browser. */
+/* games.shareyourgroup.com/partygames: game finder, party timer, chit maker (draw, teams, print), scoreboard. Everything stays in the browser. */
 (function () {
   'use strict';
   var d = document, LS = window.localStorage;
