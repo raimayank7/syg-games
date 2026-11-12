@@ -1,0 +1,10 @@
+
+.jks{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr))}
+.jk{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px}
+.jk p{margin:0;font-size:1.08rem;line-height:1.7}.jk .acts{margin-top:auto}
+.sv[aria-pressed=true]{background:var(--surface2);border-color:var(--bad);color:var(--bad)}
+[lang=hi]{font-family:'Noto Sans Devanagari','Nirmala UI','Mangal',var(--font)}
+#day{min-height:150px}#random{max-width:640px;margin:14px 0;min-height:10px}
+.sets{list-style:none;padding:0;margin:14px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.sets a{display:block;height:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-decoration:none;color:var(--ink)}
+.sets a:hover{border-color:var(--accent)}.sets b{display:block;font-family:var(--font-head);font-size:1.08rem;margin-bottom:6px}.sets span{color:var(--soft);font-size:.95rem;white-space:pre-line}

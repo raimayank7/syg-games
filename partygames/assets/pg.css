@@ -1,0 +1,25 @@
+/* Party Games: game cards, finder, plans, timer, chits, scoreboard */
+.gcards{list-style:none;padding:0;margin:14px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.gcard a{display:flex;flex-direction:column;gap:4px;height:100%;padding:14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);text-decoration:none;color:var(--ink)}
+.gcard a:hover{border-color:var(--accent);box-shadow:var(--shadow)}
+.gcard b{font:700 1.08rem var(--font-head)}.gcard span{color:var(--soft);font-size:.95rem}.gcard small{color:var(--soft);font-size:.82rem;margin-top:auto;padding-top:6px}
+#pfind label{margin-top:8px}#pfind .chips{margin:4px 0 6px}
+h2 small{font:400 .85rem var(--font);color:var(--soft)}
+.plans a{align-items:flex-start}.plans .sub{font-weight:400;color:var(--soft);font-size:.88rem}
+ul.check{list-style:none;padding-left:0}ul.check li{padding-left:1.7em;position:relative}ul.check li::before{content:"\2610";position:absolute;left:0;font-size:1.2em;line-height:1.25}
+textarea,input[type=number]{width:100%;min-height:46px;padding:10px 12px;font:inherit;font-size:1rem;color:var(--ink);background:var(--field);border:1px solid var(--field-line);border-radius:10px}
+.tm-big{font:700 clamp(4rem,26vw,10rem)/1 var(--mono);text-align:center;padding:10px 0 14px;letter-spacing:-.02em}
+.tm-big.last{color:var(--bad)}.tm-big.done{color:var(--bad);animation:tmf .5s 4}
+@keyframes tmf{50%{opacity:.25}}
+@media (prefers-reduced-motion:reduce){.tm-big.done{animation:none}}
+.chit-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));margin:10px 0}
+.chit-grid span{border:1px dashed var(--soft);padding:16px 8px;text-align:center;font-weight:600;min-height:64px;display:grid;place-items:center;overflow-wrap:anywhere;background:var(--surface)}
+.sc-list{list-style:none;padding:0;margin:12px 0;display:grid;gap:8px}
+.sc-list li{display:flex;align-items:center;gap:8px;flex-wrap:wrap;background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:8px 10px}
+.sc-list .nm{flex:1 1 120px;font-weight:600;overflow-wrap:anywhere}.sc-list b{font:700 1.7rem var(--mono);min-width:2.2em;text-align:right}
+.sc-list .bt{display:flex;gap:4px}.sc-list button{min-width:44px;min-height:44px;border:1px solid var(--field-line);border-radius:8px;background:var(--field);color:var(--ink);font:700 1rem var(--font);cursor:pointer}
+.sc-list button.x{color:var(--bad)}.sc-list .empty{color:var(--soft);justify-content:center}
+@media print{
+  body.print-chits main>*:not(.wrap),body.print-chits .finder,body.print-chits .result,body.print-chits .noprint,.boot{display:none!important}
+  body.print-chits .chit-grid{grid-template-columns:repeat(3,1fr)}body.print-chits .chit-grid span{border:1px dashed #000;background:#fff;color:#000;min-height:26mm;font-size:14pt;break-inside:avoid}
+}

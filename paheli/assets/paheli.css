@@ -1,0 +1,15 @@
+
+.rds{list-style:none;padding:0;margin:16px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,330px),1fr));counter-reset:r}
+.rd{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;display:flex;flex-direction:column;gap:10px}
+.rds .rd{counter-increment:r}.rds .rd .rt::before{content:counter(r) ". ";color:var(--accent);font-weight:700}
+.rt{margin:0;font-size:1.08rem;line-height:1.7}.rd details{margin:0;background:var(--surface2)}.rd details p{margin:0 0 12px}.rd .acts{margin-top:auto}
+[lang=hi]{font-family:'Noto Sans Devanagari','Nirmala UI','Mangal',var(--font)}
+#day{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));min-height:150px}
+.big-rd{max-width:640px;margin:16px auto;padding:20px}.big-rd .rt{font-size:1.3rem}
+.answer{font:700 1.4rem var(--font-head);color:var(--accent);margin:0}
+.tools{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
+.sets{list-style:none;padding:0;margin:14px 0;display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(min(100%,300px),1fr))}
+.sets a{display:block;height:100%;background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:14px;text-decoration:none;color:var(--ink)}
+.sets a:hover{border-color:var(--accent)}.sets b{display:block;font-family:var(--font-head);font-size:1.08rem;margin-bottom:6px}.sets span{color:var(--soft);font-size:.95rem;white-space:pre-line}
+.msg{white-space:pre-line;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--teal);border-radius:10px;padding:12px 14px;margin:10px 0}
+@media print{.rd details{display:block}.rd details summary{display:none}}
