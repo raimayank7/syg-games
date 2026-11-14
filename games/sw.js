@@ -1,4 +1,4 @@
-const CACHE = 'syg-m-games-cdc110db81', SHELL = ["/games/assets/site.css?v=1f799d5064", "/games/assets/site.js?v=be6129bb4a", "/games/icons/logo-light.webp", "/games/icons/logo-dark.webp"];
+const CACHE = 'syg-m-games-5f0e96f5c0', SHELL = ["/games/assets/site.css?v=bdcd893b36", "/games/assets/site.js?v=be6129bb4a", "/games/icons/logo-light.webp", "/games/icons/logo-dark.webp"];
 self.addEventListener('install', e => { self.skipWaiting(); e.waitUntil(caches.open(CACHE).then(c => c.addAll(SHELL)).catch(() => {})); });
 self.addEventListener('activate', e => e.waitUntil(caches.keys().then(ks => Promise.all(ks.filter(k => k.indexOf('syg-m-games-') === 0 && k !== CACHE).map(k => caches.delete(k)))).then(() => self.clients.claim())));
 self.addEventListener('fetch', e => {
